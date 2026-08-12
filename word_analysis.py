@@ -1,3 +1,5 @@
+"""Morphological and POS analysis script."""
+
 import nltk
 
 # Download required NLTK data
@@ -195,7 +197,12 @@ hindi_words = {
 # Display the analysis result
 
 def analyze_word(word, language):
+    """Prints morphological information for a given word.
 
+    Args:
+        word (str): The word to analyze.
+        language (str): The language of the word, either 'English' or 'Hindi'.
+    """
     if language == "English":
         data = english_words
     else:
@@ -222,7 +229,11 @@ def analyze_word(word, language):
 # NLTK POS tagger
 
 def nltk_pos_analysis(sentence):
+    """Tokenizes and prints part-of-speech tags for a sentence.
 
+    Args:
+        sentence (str): The English text to process.
+    """
     print("\nNLTK POS Analysis:")
 
     tokens = nltk.word_tokenize(sentence)
@@ -235,7 +246,7 @@ def nltk_pos_analysis(sentence):
 # Main loop
 
 def main():
-
+    """Runs the interactive command line interface."""
     while True:
 
         print("\n=== Morphological Analyzer ===")
